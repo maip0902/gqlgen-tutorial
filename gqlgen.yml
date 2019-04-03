@@ -15,3 +15,5 @@ resolver:
 models:
   Todo:
     model: github.com/sweetbrain/gqlgen-todos.Todo
+  User:
+    model: github.com/sweetbrain/gqlgen-todos.User
