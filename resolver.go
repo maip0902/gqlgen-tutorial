@@ -6,7 +6,7 @@ import (
 	"math/rand"
 ) // THIS CODE IS A STARTING POINT ONLY. IT WILL NOT BE UPDATED WITH SCHEMA CHANGES.
 
-type Resolver struct{
+type Resolver struct {
 	todos []Todo
 }
 
@@ -25,6 +25,7 @@ type mutationResolver struct{ *Resolver }
 func (r *mutationResolver) CreateTodo(ctx context.Context, input NewTodo) (*Todo, error) {
 	todo := &Todo{
 		Text:   input.Text,
+		Title:  input.Title,
 		ID:     fmt.Sprintf("T%d", rand.Int()),
 		UserID: input.UserID,
 	}

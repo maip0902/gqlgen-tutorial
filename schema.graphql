@@ -3,11 +3,14 @@ type Todo {
   text: String!
   done: Boolean!
   user: User!
+
+  title: String!
 }
 
 type User {
   id: ID!
   name: String!
+  email: String!
 }
 
 type Query {
@@ -15,6 +18,7 @@ type Query {
 }
 
 input NewTodo {
+  title: String!
   text: String!
   userId: String!
 }
