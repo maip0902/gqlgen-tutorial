@@ -2,6 +2,7 @@ package gqlgen_todos
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"math/rand"
 ) // THIS CODE IS A STARTING POINT ONLY. IT WILL NOT BE UPDATED WITH SCHEMA CHANGES.
@@ -48,6 +49,14 @@ type queryResolver struct{ *Resolver }
 
 func (r *queryResolver) Todos(ctx context.Context) ([]Todo, error) {
 	return r.todos, nil
+}
+func (r *queryResolver) User(ctx context.Context, id string) (*User, error) {
+	for _, user := range r.users {
+		if (user.ID == id) {
+			return &user, nil
+		}
+	}
+	return &User{}, errors.New("Sorry, Not Found.")
 }
 func (r *queryResolver) Users(ctx context.Context) ([]User, error) {
 	return r.users, nil

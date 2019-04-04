@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Go/src/github.com/rubenv/sql-migrate" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Go/src/gopkg.in/gorp.v1" vcs="Git" />
   </component>
 </project>

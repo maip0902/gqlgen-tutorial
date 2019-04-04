@@ -1,0 +1,11 @@
+pkgname="db"
+output="app/db"
+add-global-variants=true
+add-panic-variants=true
+[mysql]
+  dbname  = "gqlgen"
+  host    = "localhost"
+  port    = 3306
+  user    = "root"
+  pass    = "password"
+  sslmode = "false"
